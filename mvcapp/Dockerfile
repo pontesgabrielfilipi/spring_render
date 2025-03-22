@@ -1,6 +1,12 @@
 # Etapa de construção do container
-FROM maven:3.4.3-openjdk-21 AS build
-# caso o servidor VPS use o ubunto
+
+#não funcionou
+# FROM maven:3.4.3-openjdk-21 AS build
+
+FROM openjdk:21-slim AS build
+RUN apt-get update && apt-get-install -y maven && apt-get clean &&rm -rf/var/lib/apt/lists/*
+
+#caso o servidor VPS use o ubunto
 # FROM ubunto:latest AS build
 
 # Definir o diretório dentro do container para a aplicação
