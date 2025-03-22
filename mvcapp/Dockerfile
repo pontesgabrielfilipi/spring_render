@@ -29,3 +29,5 @@ EXPOSE 8080
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
 
 # Depois usar o "git add ."
+# Depois o "git commit -m "Adiciona o docker para deployment no Render.com"
+# E por ultimo o "git push origin main"
